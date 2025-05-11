@@ -1,4 +1,4 @@
-# tutorial_lindhard
+# Tutorial Lindhard Reponse Function
 Tutorial on the LIndhard Response Function - Siesta[5.2]
 
 This tutorial is made up of two parts:
