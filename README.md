@@ -47,10 +47,9 @@ The current implementation runs in the (a*,b*) plane.
 **Lindhard.nq2		4** - Every nth point along b-axis will be printed in the siesta.lindhard
 
 ## Tutorial exercises
-This tutorial is made up of two parts:
+This tutorial is made up of two parts. You will have access to the necessary minimal files to redo the calculations.
 
 1.Atomic H chain 
 
-You will have access to the necessary minimal files 
 
 2.Blue Bronze (K0.3MoO3)
