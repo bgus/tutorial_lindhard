@@ -56,3 +56,30 @@ The point of this first tutorial is to self-check that in-fact the half-filled e
 Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . A simple linux command to do is to run, for example: **sort -rk3 h_chain.lindhard | head**
 
 ### 2.Blue Bronze (K0.3MoO3)
+
+The point of this tutorial is to understand how to use the code when multiple bands are crossing the Fermi level, now in a real material. 
+
+Please feel free to download the fdf, KP and EIG files and run locally **linhard < bluebronze.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids.
+
+In order to obtain the full q-point map, you can now run locally by modifying the (a*,b*) in-plane grid, for example change:
+
+**Lindhard.ngridx		64**
+
+**Lindhard.ngridy    	64**
+
+**Lindhard.ngridz		 2**
+
+on the two bands crossing the Fermi level (160 and 161).
+
+You can see the results using gnuplot or python or other prefered. 
+
+In gnuplot, you can simply run:
+
+$$
+set palette defined (0 "black", 0.5"blue",0.75"white", 1.00"red")
+
+set view map
+
+sp 'bluebronze.lindhard' u 1:2:3 w p ps 3 lc palette  t ''
+$$
+
