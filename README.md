@@ -1,4 +1,4 @@
-# Tutorial Lindhard Reponse Function
+# Lindhard Reponse Function
 Tutorial on the LIndhard Response Function - Siesta[5.2]
 
 The Lindhard Response Function in SIESTA is implemented under two approximations: plane-wave basis sets and static limit. 
@@ -21,9 +21,10 @@ The electronic eigenvalues and corresponding k-point grid will be red from the s
 
 A prerequisite to generating these two files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid: TimeReversalSymmetryForKpoints F .
 
-# Limitations
+#Limitations
 The current implementation does not run on 
 
+# Tutorial exercises
 This tutorial is made up of two parts:
 
 1.Atomic H chain 
