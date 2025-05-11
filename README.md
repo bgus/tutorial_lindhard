@@ -42,9 +42,9 @@ The current implementation runs in the (a*,b*) plane.
 
 **Lindhard.ngridz		32** - Number of points used for interpolating the k-point grid along the z-axis.
 
-**Lindhard.nq1		1** - Every nth point along a-axis will be printed in the siesta.lindhard
+**Lindhard.nq1		3** - Every nth point along a-axis will be printed in the siesta.lindhard
 
-**Lindhard.nq2		1** - Every nth point along b-axis will be printed in the siesta.lindhard
+**Lindhard.nq2		3** - Every nth point along b-axis will be printed in the siesta.lindhard
 
 ## Tutorial exercises
 This tutorial is made up of two parts:
