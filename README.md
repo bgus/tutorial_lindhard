@@ -55,6 +55,6 @@ The point of this first tutorial is to self-check that in-fact the half-filled e
 
 Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . 
 
-A simple linux command is to run, for example: **sort -rk3 h_chain.lindhard | head **
+A simple linux command is to run, for example: **sort -rk3 h_chain.lindhard | head**
 
 ### 2.Blue Bronze (K0.3MoO3)
