@@ -63,11 +63,11 @@ Please feel free to download the fdf, KP and EIG files and run locally **linhard
 
 In order to obtain the full q-point map, you can now run locally by modifying the (a*,b*) in-plane grid, for example change:
 
-**Lindhard.ngridx		64**
-
-**Lindhard.ngridy    	64**
-
-**Lindhard.ngridz		 2**
+>Lindhard.ngridx		64
+>
+>Lindhard.ngridy    	64
+>
+>Lindhard.ngridz		 2
 
 on the two bands crossing the Fermi level (160 and 161).
 
