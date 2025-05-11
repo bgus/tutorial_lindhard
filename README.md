@@ -51,6 +51,6 @@ This tutorial is made up of two parts. You will have access to the necessary min
 
 ### 1.Atomic H chain 
 
-The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $' 2k_F = 0.5 a* '$, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
+The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $ 2k_F = 0.5 a* $, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
 
 ### 2.Blue Bronze (K0.3MoO3)
