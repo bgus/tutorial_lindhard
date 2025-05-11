@@ -76,9 +76,10 @@ You can see the results using gnuplot or python or other prefered.
 In gnuplot, you can simply run:
 
 >set palette defined (0 "black", 0.5"blue",0.75"white", 1.00"red")
->set view map
->sp 'bluebronze.lindhard' u 1:2:3 w p ps 3 lc palette  t ''
 >
+>set view map
+>
+>sp 'bluebronze.lindhard' u 1:2:3 w p ps 3 lc palette  t ''
 >
 
 
