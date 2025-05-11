@@ -9,6 +9,15 @@ The Lindhard Response Function in SIESTA is implemented under two approximations
 \end{equation}
 ```
 
+\noindent
+where \textit {f}$_F$ is the Fermi-Dirac distribution function defined as:
+
+```math
+\begin{equation}
+    f_F(\epsilon_i({k})) = \frac{1}{e^{(\epsilon_i({k})-\epsilon_F)/k_BT}+1}
+\end{equation}
+```
+
 This tutorial is made up of two parts:
 
 1.Atomic H chain 
