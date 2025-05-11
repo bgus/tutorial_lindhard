@@ -53,4 +53,6 @@ This tutorial is made up of two parts. You will have access to the necessary min
 
 The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $'2k_F = 0.5 a*'$, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
 
+Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify 
+
 ### 2.Blue Bronze (K0.3MoO3)
