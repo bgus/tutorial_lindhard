@@ -44,7 +44,7 @@ The current implementation runs in the (a*,b*) plane.
 
 **Lindhard.nq1		3** - Every nth point along a-axis will be printed in the siesta.lindhard
 
-**Lindhard.nq2		3** - Every nth point along b-axis will be printed in the siesta.lindhard
+**Lindhard.nq2		4** - Every nth point along b-axis will be printed in the siesta.lindhard
 
 ## Tutorial exercises
 This tutorial is made up of two parts:
