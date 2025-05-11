@@ -36,11 +36,11 @@ The current implementation runs in the (a*,b*) plane.
 
 **Lindhard.lastband	 64** - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
 
-**Lindhard.ngridx		32** - Number of points used for interpolating the k-point grid along the x-axis.
+**Lindhard.ngridx		64** - Number of points used for interpolating the k-point grid along the x-axis.
 
-**Lindhard.ngridy		32** - Number of points used for interpolating the k-point grid along the y-axis.
+**Lindhard.ngridy		72** - Number of points used for interpolating the k-point grid along the y-axis.
 
-**Lindhard.ngridz		32** - Number of points used for interpolating the k-point grid along the z-axis.
+**Lindhard.ngridz		 4** - Number of points used for interpolating the k-point grid along the z-axis.
 
 **Lindhard.nq1		3** - Every nth point along a-axis will be printed in the siesta.lindhard
 
