@@ -37,7 +37,9 @@ The current implementation runs in the (a*,b*) plane.
 **Lindhard.lastband	 64** - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
 
 **Lindhard.ngridx		32**
-**Lindhard.ngridy		256**
+
+**Lindhard.ngridy		32**
+
 **Lindhard.ngridz		32**
 
 **Lindhard.nq1		1**
