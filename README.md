@@ -24,7 +24,23 @@ A prerequisite to generating these two files in the preliminary siesta run is to
 # Limitations
 The current implementation does not run for spin-polarized systems.
 
-The current implementation run in the (a*,b*) plane. 
+The current implementation runs in the (a*,b*) plane. 
+
+
+# Keywords explained 
+
+Lindhard.Temperature 10 K - Setting the temperature of the Fermi-Dirac distribution function.
+
+Lindhard.firstband	 23 - Setting the first electronic band to be accounted for in the integration, usually is enough to account for the first band that is crossing the Fermi level.
+
+Lindhard.lastband	 64 - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
+
+Lindhard.ngridx		32
+Lindhard.ngridy		256
+Lindhard.ngridz		32
+
+Lindhard.nq1		1
+Lindhard.nq2		1
 
 # Tutorial exercises
 This tutorial is made up of two parts:
