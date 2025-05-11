@@ -34,7 +34,7 @@ The current implementation runs in the (a*,b*) plane.
 
 **Lindhard.firstband	 23** - Setting the first electronic band to be accounted for in the integration, usually is enough to account for the first band that is crossing the Fermi level.
 
-**Lindhard.lastband	 64** - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
+**Lindhard.lastband	     25** - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
 
 **Lindhard.ngridx		64** - Number of points used for interpolating the k-point grid along the x-axis.
 
