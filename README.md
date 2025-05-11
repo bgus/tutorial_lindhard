@@ -24,6 +24,8 @@ A prerequisite to generating these two files in the preliminary siesta run is to
 # Limitations
 The current implementation does not run for spin-polarized systems.
 
+The current implementation run in the (a*,b*) plane. 
+
 # Tutorial exercises
 This tutorial is made up of two parts:
 
