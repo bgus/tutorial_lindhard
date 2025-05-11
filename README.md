@@ -49,7 +49,8 @@ The current implementation runs in the (a*,b*) plane.
 ## Tutorial exercises
 This tutorial is made up of two parts. You will have access to the necessary minimal files to redo the calculations.
 
-1.Atomic H chain 
+### 1.Atomic H chain 
 
+The point of this first tutorial.
 
-2.Blue Bronze (K0.3MoO3)
+### 2.Blue Bronze (K0.3MoO3)
