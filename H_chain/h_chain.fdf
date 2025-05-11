@@ -1,0 +1,55 @@
+SystemName          H chain
+SystemLabel         h_chain
+NumberOfAtoms       1
+NumberOfSpecies     1
+
+MeshCutoff  50 Ry
+
+%block ChemicalSpeciesLabel
+ 1  1  H
+%endblock ChemicalSpeciesLabel
+
+#
+# Note: For some reason, SZ will not work...
+#
+PAO.BasisSize DZ
+
+LatticeConstant 1.0 Ang
+%block LatticeVectors
+1.48 0.0  0.0
+0.0  8.0  0.0
+0.0  0.0  8.0
+%endblock LatticeVectors
+
+%block kgrid_Monkhorst_Pack
+100  0  0  0.0
+  0  1  0  0.0
+  0  0  1  0.0
+%endblock kgrid_Monkhorst_Pack 
+
+AtomicCoordinatesFormat  Ang
+%block AtomicCoordinatesAndAtomicSpecies
+ 0.000  0.000  0.000  1
+%endblock AtomicCoordinatesAndAtomicSpecies
+
+kgrid_cutoff     5 Ang
+TimeReversalSymmetryForKpoints F
+XC.functional    GGA
+XC.authors       PBE
+Spin             None
+MeshCutoff       50 Ry
+DM.MixingWeight  0.200
+DM.NumberPulay   3
+DM.UseSaveDM     T
+
+Lindhard.Temperature  10.0 K
+
+Lindhard.firstband   1
+Lindhard.lastband    1
+
+Lindhard.ngridx    1000
+Lindhard.ngridy    2
+Lindhard.ngridz    2
+
+Lindhard.nq1       1
+Lindhard.nq2       1
