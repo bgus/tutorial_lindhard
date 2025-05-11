@@ -19,7 +19,7 @@ where $`\textit {f}_F`$ is the Fermi-Dirac distribution function defined as:
 
 The electronic eigenvalues and corresponding k-point grid will be red from the siesta output file siesta.KP and siesta.EIG and further interpolated based on the keywords provided in the siesta.fdf file as an input to the lindhard executable. 
 
-A prerequisite to generating these to files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid: $'TimeReversalSymmetryForKpoints F'$.
+A prerequisite to generating these to files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid: TimeReversalSymmetryForKpoints F .
 
 This tutorial is made up of two parts:
 
