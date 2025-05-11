@@ -22,7 +22,7 @@ The electronic eigenvalues and corresponding k-point grid will be red from the s
 A prerequisite to generating these two files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid: TimeReversalSymmetryForKpoints F .
 
 # Limitations
-The current implementation does not run on 
+The current implementation does not run for spin-polarized systems.
 
 # Tutorial exercises
 This tutorial is made up of two parts:
