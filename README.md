@@ -4,7 +4,7 @@ Tutorial on the LIndhard Response Function - Siesta[5.2]
 The Lindhard Response Function in SIESTA is implemented under two approximations: plane-wave basis sets and static limit. 
 
 ```math
-\begin{equation}\label{eq:chi}
+\begin{equation}
 \chi(q)=-\sum_{i,j}\sum_{k}\frac{f_F(\epsilon_i({k}))-f_F(\epsilon_j({k}+{q}))}{\epsilon_i({k})-\epsilon_j({k}+{q})},
 \end{equation}
 ```
