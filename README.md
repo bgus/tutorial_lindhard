@@ -9,8 +9,7 @@ The Lindhard Response Function in SIESTA is implemented under two approximations
 \end{equation}
 ```
 
-\noindent
-where \textit {f}$_F$ is the Fermi-Dirac distribution function defined as:
+where $$\textit {f}$_F$$ is the Fermi-Dirac distribution function defined as:
 
 ```math
 \begin{equation}
