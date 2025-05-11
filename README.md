@@ -17,6 +17,9 @@ where $`\textit {f}_F`$ is the Fermi-Dirac distribution function defined as:
 \end{equation}
 ```
 
+The electronic eigenvalues and corresponding k-point grid will be red from the siesta output file siesta.KP and siesta.EIG.
+
+
 This tutorial is made up of two parts:
 
 1.Atomic H chain 
