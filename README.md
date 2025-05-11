@@ -17,7 +17,9 @@ where $`\textit {f}_F`$ is the Fermi-Dirac distribution function defined as:
 \end{equation}
 ```
 
-The electronic eigenvalues and corresponding k-point grid will be red from the siesta output file siesta.KP and siesta.EIG.
+The electronic eigenvalues and corresponding k-point grid will be red from the siesta output file siesta.KP and siesta.EIG and further interpolated based on the keywords provided in the siesta.fdf file as an input to the lindhard executable. 
+
+
 
 
 This tutorial is made up of two parts:
