@@ -18,9 +18,9 @@ where $`\textit {f}_F`$ is the Fermi-Dirac distribution function defined as:
 \end{equation}
 ```
 
-The electronic eigenvalues and corresponding k-point grid will be red from the siesta output file siesta.KP and siesta.EIG and further interpolated based on the keywords provided in the siesta.fdf file as an input to the lindhard executable. 
+The electronic eigenvalues and corresponding k-point grid will be red from the siesta output files siesta.KP and siesta.EIG and further interpolated based on the keywords provided in the siesta.fdf file as an input to the lindhard executable. 
 
-A prerequisite to generating these two files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid: TimeReversalSymmetryForKpoints F .
+A prerequisite to generating these two files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid (e.g. TimeReversalSymmetryForKpoints F).
 
 ## Limitations
 The current implementation does not run for spin-polarized systems.
@@ -46,6 +46,8 @@ The current implementation runs in the (a*,b*) plane.
 
 **Lindhard.nq2		4** - Every nth point along b-axis will be printed in the siesta.lindhard
 
+N.B. All the Lindhard grid points need to be even numbers.
+
 ## Tutorial exercises
 This tutorial is made up of two parts. You will have access to the necessary minimal files to redo the calculations.
 
@@ -53,15 +55,15 @@ This tutorial is made up of two parts. You will have access to the necessary min
 
 The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $'2k_F = 0.5 a*'$, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
 
-Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . A simple linux command to do is to run, for example: **sort -rk3 h_chain.lindhard | head**
+Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . A simple linux command to do is to run, for example: **sort -rk3 h_chain.lindhard | head -n 10**, to see the 10th largest value of the response.
 
 ### 2.Blue Bronze (K0.3MoO3)
 
 The point of this tutorial is to understand how to use the code when multiple bands are crossing the Fermi level, now in a real material. 
 
-Please feel free to download the fdf, KP and EIG files and run locally **linhard < bluebronze.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids.
+Please feel free to download the fdf, KP and EIG files and run locally **linhard < bluebronze.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the q-point grid.
 
-In order to obtain the full q-point map, you can now run locally by modifying the (a*,b*) in-plane grid, for example change:
+In order to obtain the full q-point map, you can now run locally by modifying the (a*,b*) in-plane grid, for example change to:
 
 >Lindhard.ngridx		64
 >
@@ -71,7 +73,7 @@ In order to obtain the full q-point map, you can now run locally by modifying th
 
 on the two bands crossing the Fermi level (160 and 161).
 
-You can see the results using gnuplot or python or other prefered. 
+You can see the results using gnuplot or python or other prefered software. 
 
 In gnuplot, you can simply run:
 
