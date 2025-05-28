@@ -1,8 +1,8 @@
 # Lindhard Reponse Function
-## General remarks about the Lindhard Reponse Function
+## General remarks about the Lindhard Reponse Function in SIESTA
 Tutorial on the LIndhard Response Function - Siesta[5.2]
 
-The Lindhard Response Function in SIESTA is implemented under two approximations: plane-wave basis sets and static limit. 
+The Lindhard Response Function in SIESTA is implemented under two approximations: plane-wave basis set and static limit. 
 
 ```math
 \begin{equation}
@@ -22,40 +22,42 @@ The electronic eigenvalues and corresponding k-point grid will be red from the s
 
 A prerequisite to generating these two files in the preliminary siesta run is to turn off time-reversal symmetry so as to have access to the full k-point grid (e.g. TimeReversalSymmetryForKpoints F).
 
+At the end of the run, one should obtain a siesta.LINDHARD file with 3 columns: the first two will contain the information about the grid of q-points in the (a*,b*) plane determined by the keywords **Lindhard.ngridx** and **Lindhard.ngridy** (see below explanation), while the third will contain the actual response.
+
 ## Limitations
 The current implementation does not run for spin-polarized systems.
 
-The current implementation runs in the (a*,b*) plane. 
+The current implementation runs in the (a*,b*) plane while it collapses the sum along the third direction according to the number of slice (c* direction q-points) one inputs. 
 
 
 ## Keywords explained 
 
 **Lindhard.Temperature 10 K** - Setting the temperature of the Fermi-Dirac distribution function.
 
-**Lindhard.firstband	 23** - Setting the first electronic band to be accounted for in the integration, usually is enough to account for the first band that is crossing the Fermi level.
+**Lindhard.firstband	 23** - Setting the first electronic band to be accounted for in the integration, usually it is enough to account for the first band that is crossing the Fermi level.
 
-**Lindhard.lastband	     25** - Setting the last electronic band to be accounted for in the integration, usually is enough to account up to the last band that is crossing the Fermi level.
+**Lindhard.lastband	     25** - Setting the last electronic band to be accounted for in the integration, usually it is enough to account up to the last band that is crossing the Fermi level.
 
-**Lindhard.ngridx		64** - Number of points used for interpolating the k-point grid along the x-axis.
+**Lindhard.ngridx		64** - Number of points used for interpolating the k-point grid along the x-axis, this will be your equivalent q-point grid along a* printed in the siesta.LINDHARD output in the first column.
 
-**Lindhard.ngridy		72** - Number of points used for interpolating the k-point grid along the y-axis.
+**Lindhard.ngridy		72** - Number of points used for interpolating the k-point grid along the y-axis, this will be your equivalent q-point grid along b* printed in the siesta.LINDHARD output in the second column.
 
 **Lindhard.ngridz		 4** - Number of points used for interpolating the k-point grid along the z-axis.
 
-**Lindhard.nq1		3** - Every nth point along a-axis will be printed in the siesta.lindhard
+**Lindhard.nq1		4** - Every nth point along a-axis will be printed in the siesta.LINDHARD. This option is useful only if you want to print less points than the grid you use for interpolation (for example here you print every 4th point).
 
-**Lindhard.nq2		4** - Every nth point along b-axis will be printed in the siesta.lindhard
+**Lindhard.nq2		4** - Every nth point along b-axis will be printed in the siesta.LINDHARD.
 
 N.B. All the Lindhard grid points need to be even numbers.
 
 ## Tutorial exercises
-This tutorial is made up of two parts. You will have access to the necessary minimal files to redo the calculations.
+This tutorial is made up of two parts. You have access to the necessary minimal files to redo the calculations.
 
 ### 1.Atomic H chain 
 
-The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $'2k_F = 0.5 a*'$, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
+The point of this first tutorial is to self-check that in-fact the half-filled electronic band of an atomic H chain gives exactly the Fermi nesting wave vector $'2k_F = \pi/a'$, as in half of the length of the reciprocal wave vector, corresponding to the half-filling of the band.
 
-Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . A simple linux command to do is to run, for example: **sort -rk3 h_chain.lindhard | head -n 10**, to see the 10th largest value of the response.
+Go ahead and enter the **H_chain** folder. Download  the fdf, KP and EIG files and run locally **lindhard < h_chain.fdf**. Inspect the output file. Feel free to modify the keywords at your own will and follow how the position of the maximum converges with the k-point and q-point grids. Change the temperature and follow the maximum evolution . A simple linux command to look for the maximum in the output file is to run, for example: **sort -rk3 h_chain.lindhard | head -n 10**, to see the 10th largest value of the response.
 
 ### 2.Blue Bronze (K0.3MoO3)
 
