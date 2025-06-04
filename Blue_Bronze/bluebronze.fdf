@@ -113,6 +113,8 @@ kgrid_cutoff		30 Ang
     0    0   11   0.0
 %endblock kgrid_Monkhorst_Pack
 
+TimeReversalSymmetryForKpoints F
+
 BandLinesScale  ReciprocalLatticeVectors
 
 %block Bandlines
